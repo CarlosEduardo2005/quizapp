@@ -4,13 +4,13 @@
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     -webkit-font-smoothing: antialiased;
-    g
 }
 
 :root {
-    --bg-color: #f4f6fa
-    --purple: #a729f5
-    --primary-text-color: #313e51
+    --bg-color: #f4f6fa;
+    --purple: #a729f5;
+    --primary-text-color: #313e51;
+    --secondary-text-color: #626c7f;
     --white: #fff;
     --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
 }
@@ -42,7 +42,7 @@ header {
 .tema button{
     height: 20px;
     width: 32px;
-    background: var (--purple);
+    background: var(--purple);
     border: 0;
     border-radius: 999px;
     padding: 4px;
@@ -59,8 +59,24 @@ main{
     padding: 32px 24px;
 }
 
-mai h1 {
-    font-size: 40ox;
+.boas_vidas {
+    margin-bottom: 40px;
+}
+
+.boas_vidas h1 {
+    font-size: 40px;
     font-weight: 300;
     color: var(--primary-text-color);
+    margin-bottom: 16px;
+}
+
+.boas_vidas h1 strong{
+    font-weight: 500;
+}
+
+.boas_vindas p {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    line-height: 150%;
+    font-style: italic;
 }
