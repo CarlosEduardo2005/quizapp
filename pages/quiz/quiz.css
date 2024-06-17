@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-moothing: antialiased;
 }
 
 :root {
@@ -15,21 +15,21 @@
     --primary-text-color: #313e51;
     --secondary-text-color: #626c7f;
     --button-bg: #fff;
-    --shadow: 0px 16px 48px 0px  rgba(143 168 193, 0.14);
+    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
     --bg-html: #fff1e9;
     --bg-css: #e0fdef;
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
     --white: #fff;
-    --green: #26d782;
+    --greem: #66d782;
     --red: #ee5454;
-    --bg-mobile: url(../../assets/images/pattern-background-mobile-light.svg);
+    --bg-mobile: url(../../assets/images/patter-background-mobile-light.svg);
     --bg-desktop: url(../../assets/images/pattern-background-desktop-light.svg);
 }
 
 body.escuro {
     --bg-color: #313e51;
-    --color-span: #313e51;
+    --color-span:#313e51;
     --bg-mobile: url(../../assets/images/pattern-background-mobile-dark.svg);
     --bg-desktop: url(../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
@@ -113,7 +113,7 @@ header {
 }
 
 .tema button div {
-    background: var(--white);
+    background:var(--white);
     width: 12px;
     height: 12px;
     border-radius: 999px;
@@ -151,7 +151,6 @@ main {
 
 .barra_progresso div {
     height: 100%;
-    width: 60%;
     background: var(--purple);
     border-radius: 999px;
 }
@@ -192,20 +191,20 @@ main {
 }
 
 .alternativas label#correta {
-    outline: 3px solid var(--green);
+    outline: 3px solid var(--greem);
 
     & span {
-        background: var(--green);
+        background: var(--greem);
         color: var(--white);
     }
 }
 
-.alternativas label#errada{
-    outline: 3px solid var(--red);
+.alternativas label#errada {
+    outline:3px solid var(--red);
 
     & span {
         background: var(--red);
-        color: var(--white);
+        color:var(--white);
     }
 }
 
@@ -226,7 +225,7 @@ main {
     background: var(--bg-span);
     border-radius: 5px;
     color: var(--color-span);
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,28 +251,26 @@ main {
 }
 
 @media(min-width: 1100px) {
-
     body {
         background: var(--bg-desktop) var(--bg-color);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-    header {
+    header{
         margin-block: 81px;
         max-width: 1160px;
         margin-inline: auto;
     }
 
-    .assunto_icone {
+    .assunto_icone{
         width: 56px;
         height: 56px;
         padding: 8px;
     }
 
-    .assunto h1 {
+    .assunto h1{
         font-size: 28px;
-
     }
 
     .tema {
@@ -335,7 +332,7 @@ main {
     }
 
     .alternativas div {
-        gap: 32px;
+       gap: 32px;
     }
 
     .alternativas div span {
