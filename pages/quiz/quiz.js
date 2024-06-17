@@ -9,6 +9,7 @@ let ponyos = 0
 let pergunta = 1
 let resposta = ""
 let inInputResposta = ""
+let respostaCorreta = ""
 
 botaoTema.addEventListener("click", ()=> {
     trocarTema(body, botaoTema)
@@ -108,8 +109,19 @@ function alterarSinais(texto) {
 
 function guardarResposta() {
     resposta = evento.target.value
-    id InputResposta = evento.target.id
+    idInputResposta = evento.target.id
 
+    const botaoEnviar = document.querySelector(".alternativa button")
+    botaoEnviar.addEventListener("click", validarResposta)
+}
+
+function validarResposta () {
+    if (resposta === quiz.questions[perguntas-1].answer) {
+        document.querySelector(`label[for='${idInputResposta}']`).setAttribute("id", "correta")
+        pontos = pontos + 1
+    } else {
+        document.querySelector(`label[for='${idInputResposta}]`).setAttribute("id", "errada")
+    }
 }
 
 async function iniciar {
@@ -120,6 +132,10 @@ async function iniciar {
     const inputsRespostas = document.querySelector(".alternativas input")
     inputsRespostas.forEach(input => {
         input.addEventListener("click", guardarResposta)
+
+        if (input.value === quiz.questions[perguntas-1].answer) {
+            respostaCorreta = input.id
+        }
     })
 }
 
